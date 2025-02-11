@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="sidebar">
+      <h2>Dashboard</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Users</a></li>
+        <li><a href="#">Sales</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <header>
+        <div class="welcome">
+          <h1>Welcome, User!</h1>
+          <p>Your dashboard overview.</p>
+        </div>
+      </header>
+      <div class="stats">
+        <div class="card">
+          <h3>Total Users</h3>
+          <p id="totalUsers">100</p>
+        </div>
+        <div class="card">
+          <h3>Total Sales</h3>
+          <p id="totalSales">$1500</p>
+        </div>
+        <div class="card">
+          <h3>Revenue</h3>
+          <p id="revenue">$5000</p>
+        </div>
+      </div>
+      
+      <!-- Product Management Section -->
+      <div class="product-management">
+        <h2>Manage Products</h2>
+        <input type="text" id="productName" placeholder="Enter product name">
+        <input type="number" id="productPrice" placeholder="Enter product price">
+        <button id="addProductBtn">Add Product</button>
+        <div id="productList"></div>
+      </div>
+
+      <div class="charts">
+        <div id="chart1" class="chart-box">
+          <h3>Sales Data</h3>
+          <canvas id="salesChart"></canvas>
+        </div>
+        <div id="chart2" class="chart-box">
+          <h3>User Growth</h3>
+          <canvas id="growthChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
